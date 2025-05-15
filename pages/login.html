@@ -16,6 +16,7 @@
     </div>
 
     <div
+      id="loginForm"
       class="absolute top-[331px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-sm text-center"
     >
       <h2 class="text-[32px] font-semibold text-[#152536] mb-10 mt-28">
@@ -61,7 +62,9 @@
         ></p>
       </div>
 
-      <a class="text-[14px] text-black mt-4 block">Signup</a>
+      <a href="#" id="goToSignup" class="text-[14px] text-black mt-4 block"
+        >Signup</a
+      >
     </div>
 
     <button
@@ -70,6 +73,68 @@
       class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-black text-white w-full max-w-sm h-[47px] py-2 px-6 rounded-full opacity-50 cursor-not-allowed"
     >
       Signin
+    </button>
+
+    <!-- signUp Section -->
+    <div
+      id="signupForm"
+      class="absolute top-[331px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-sm text-center hidden"
+    >
+      <h2 class="text-[32px] font-semibold text-[#152536] mb-10 mt-28">
+        Signup to Your Account
+      </h2>
+
+      <div class="mb-4 relative">
+        <input
+          id="signupUsername"
+          type="text"
+          placeholder="Username"
+          class="w-full py-3 pl-10 pr-4 rounded-md bg-gray-50 text-sm focus:outline-none"
+        />
+        <span class="absolute left-3 top-1/2 transform -translate-y-1/2">
+          <img src="/icons/emailLogo.png" alt="emailLogo" />
+        </span>
+        <p
+          id="signupUsernameError"
+          class="text-red-500 text-sm text-left mt-1 ml-1"
+        ></p>
+      </div>
+
+      <div class="mb-4 relative">
+        <input
+          id="signupPassword"
+          type="password"
+          placeholder="Password"
+          class="w-full py-3 pl-10 pr-10 rounded-md bg-gray-50 text-sm focus:outline-none"
+        />
+        <span class="absolute left-3 top-1/2 transform -translate-y-1/2">
+          <img src="/icons/passwordLogo.png" alt="passwordLogo" />
+        </span>
+        <button
+          id="toggleSignupPassword"
+          type="button"
+          class="absolute right-3 top-1/2 transform -translate-y-1/2"
+        >
+          <img id="signupEyeIcon" src="/icons/unhideLogo.png" />
+          <img id="signupEyeOffIcon" src="/icons/hideLogo.png" class="hidden" />
+        </button>
+        <p
+          id="signupPasswordError"
+          class="text-red-500 text-sm text-left mt-2 ml-1"
+        ></p>
+      </div>
+
+      <a href="#" id="goToLogin" class="text-[14px] text-black mt-4 block"
+        >Login</a
+      >
+    </div>
+
+    <button
+      id="signupBtn"
+      disabled
+      class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-black text-white w-full max-w-sm h-[47px] py-2 px-6 rounded-full opacity-50 cursor-not-allowed hidden"
+    >
+      Signup
     </button>
 
     <script type="module" src="/src/login.js"></script>
