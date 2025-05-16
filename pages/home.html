@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoea - home</title>
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body>
+<body class="bg-white text-[#152536] font-sans">
+    <div class="px-4 pt-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <p id="greetingMessage" class="text-[16px] text-[#757475]"></p>
+          <h2 id="usernameDisplay" class="font-bold text-[16px]" id="username">User</h2>
+          <a href="login.html">go back</a>
+        </div>
+        <div class="flex gap-4">
+          <button><img src="/icons/ringBell.png" alt="ringBell"></button>
+          <button><img src="/icons/favoriteIcon.png" alt="favoriteIcon"></button>
+        </div>
+      </div>
+      <!-- search section -->
+      <div class="relative mt-4">
+        <input
+          type="text"
+          placeholder="Search"
+          class="w-full bg-[#FAFAFA] rounded-lg pl-10 px-4 py-2 text-sm focus:outline-none"
+        />
+                <span class="absolute left-3 top-1/2 transform -translate-y-1/2">
+          <img src="/icons/searchIcon.png" alt="search" />
+        </span>
+      </div>
+
+      <div class="mt-6 flex justify-between items-center">
+        <h3 class="font-semibold text-lg">Most Popular</h3>
+        <button class="text-sm">See All</button>
+      </div>
+<!-- scroll bar section -->
+<div class="mt-4 overflow-x-auto no-scrollbar">
+  <div id="brandContainer" class="flex gap-2 w-max px-1"></div>
+</div>
+
+      <div id="productContainer" class="grid grid-cols-2 gap-4 mt-6 pb-24"></div>
+
+      <p id="loading" class="text-center text-sm text-gray-400 mt-6 hidden">Loading...</p>
+    </div>
+
+    <nav class="fixed bottom-0 left-0 w-full bg-white shadow-md">
+      <div class="flex justify-around py-2 text-xs">
+        <button class="flex flex-col items-center text-black">
+          <span><img src="/icons/homeIcon.png" alt="home"></span>
+          <span>Home</span>
+        </button>
+        <button class="flex flex-col items-center text-gray-400">
+          <span><img src="/icons/cartIcon.png" alt="cart"></span>
+          <span>Cart</span>
+        </button>
+        <button class="flex flex-col items-center text-gray-400">
+          <span><img src="/icons/ordersIcon.png" alt="orders"></span>
+          <span>Orders</span>
+        </button>
+        <button class="flex flex-col items-center text-gray-400">
+          <span><img src="/icons/walletIcon.png" alt="wallet"></span>
+          <span>Wallet</span>
+        </button>
+        <button class="flex flex-col items-center text-gray-400">
+          <span><img src="/icons/profileIcon.png" alt="profile"></span>
+          <span>Profile</span>
+    <script type="module" src="/src/home.js"></script>
+  </body>
+</html>
