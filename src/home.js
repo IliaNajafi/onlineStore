@@ -53,6 +53,12 @@ async function loadProducts() {
         }</p>
         <p class="text-[16px] font-semibold">$ ${item.price.toFixed(2)}</p>
       `;
+      card.addEventListener("click", () => {
+        localStorage.setItem("selectedProductId", item.id);
+        console.log("Clicked ID:", item.id);
+        window.location.href = "product.html";
+      });
+
       container.appendChild(card);
     });
 
