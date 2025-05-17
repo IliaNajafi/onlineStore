@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoea - Product</title>
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body class="bg-white text-[#152536]">
+    <div class="relative w-full">
+      <div
+        id="backButton"
+        class="absolute top-4 left-4 z-10 bg-opacity-70 p-2 rounded-full"
+      >
+        <button class="text-2xl">&#8592;</button>
+      </div>
+      <div class="flex justify-center">
+        <img
+          id="productImage"
+          src=""
+          alt="Product"
+          class="w-full sm:max-w-sm md:max-w-md h-auto object-contain"
+        />
+      </div>
+    </div>
+    <div class="px-4">
+      <div class="flex justify-between items-start mt-5">
+        <div>
+          <h1
+            id="productName"
+            class="text-[22px] font-semibold leading-tight mb-1"
+          >
+            Running Sportwear
+          </h1>
+          <div class="flex gap-3 text-[12px] text-gray-500 mt-3">
+            <span
+              class="bg-gray-100 flex items-center justify-center font-bold px-2 py-1 rounded"
+              >5,371 sold</span
+            >
+            <span class="flex items-center text-[14px] font-semibold gap-1">
+              <img class="w-8 h-8" src="/icons/halfStar.svg" alt="" />
+              4.3 (5,389 reviews)
+            </span>
+          </div>
+        </div>
+        <button class="text-gray-400">
+          <img class="w-[30px] h-[30px]" src="/icons/heartIcon.svg" alt="" />
+        </button>
+      </div>
+      <hr class="text-gray-300 mt-4" />
+
+      <div class="mt-5 mb-4">
+        <h2 class="font-extrabold text-[16px] mb-1">Description</h2>
+        <p
+          id="productDescription"
+          class="text-[13px] text-gray-600 leading-relaxed"
+        ></p>
+      </div>
+
+      <!-- Size & Color -->
+      <div class="w-full flex justify-between items-start mb-4 gap-8">
+        <div>
+          <h2 class="font-bold mb-2">Size</h2>
+          <div id="sizeOptions" class="flex gap-2"></div>
+        </div>
+        <div class="flex-1">
+          <h2 class="font-bold mb-2">Color</h2>
+          <div
+            id="colorOptions"
+            class="flex gap-3 overflow-x-auto max-w-[250px] no-scrollbar px-1"
+          ></div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-5 mt-4 mb-4">
+        <h2 class="font-bold self-center">Quantity</h2>
+        <div
+          class="w-[130px] flex items-center justify-center gap-4 bg-gray-100 rounded-full px-4 py-3"
+        >
+          <button id="decreaseQty" class="text-xl font-bold">-</button>
+          <span id="quantityDisplay" class="text-lg font-bold">1</span>
+          <button id="increaseQty" class="text-xl font-bold">+</button>
+        </div>
+      </div>
+
+      <hr class="text-gray-300" />
+      <!-- Price & Cart -->
+      <div class="flex justify-between items-center mt-6 mb-10">
+        <div>
+          <p class="text-[12px] text-gray-400 mb-1">Total price</p>
+          <span id="productPrice" class="text-xl font-bold"></span>
+        </div>
+        <button
+          class="w-[280px] h-[60px] flex items-center justify-center gap-2 bg-black text-white px-6 py-3 rounded-full shadow-lg"
+        >
+          <img class="w-[18px] h-[18px]" src="/icons/finalCart.svg" alt="" />
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/product.js"></script>
+  </body>
+</html>
