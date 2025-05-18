@@ -121,7 +121,7 @@ document.getElementById("backButton").addEventListener("click", () => {
   window.location.href = "home.html";
 });
 
-document.querySelector("button:has(img)")?.addEventListener("click", () => {
+document.getElementById("addToCartBtn")?.addEventListener("click", () => {
   if (!selectedSize || !selectedColor) {
     alert("Please select both size and color.");
     return;
