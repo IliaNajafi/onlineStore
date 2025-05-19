@@ -128,19 +128,28 @@ document.getElementById("addToCartBtn")?.addEventListener("click", () => {
   }
 
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const existItem = cart.find(
+    (item) =>
+      item.id === currentProduct.id &&
+      item.size === selectedSize &&
+      item.color === selectedColor
+  );
 
-  cart.push({
-    id: currentProduct.id,
-    name: currentProduct.name,
-    price: currentProduct.price,
-    imageURL: currentProduct.imageURL,
-    quantity,
-    size: selectedSize,
-    color: selectedColor,
-  });
+  if (existItem) {
+    existItem.quantity += quantity;
+  } else {
+    cart.push({
+      id: currentProduct.id,
+      name: currentProduct.name,
+      price: currentProduct.price,
+      imageURL: currentProduct.imageURL,
+      quantity,
+      size: selectedSize,
+      color: selectedColor,
+    });
+  }
 
   localStorage.setItem("cart", JSON.stringify(cart));
-
   selectedSize = null;
   selectedColor = null;
   quantity = 1;
