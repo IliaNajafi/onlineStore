@@ -10,6 +10,22 @@ const totalElement = document.getElementById("totalPrice");
 // watch out
 let shippingCost = 0;
 // watch out
+const selectedAddress = localStorage.getItem("selectedAddress");
+if (selectedAddress) {
+  const { label, address } = JSON.parse(selectedAddress);
+  const container = document.querySelector("#shippingAddress");
+  if (container) {
+    container.innerHTML = `
+      <div class="flex gap-3 items-center">
+        <div>
+          <p class="font-bold text-sm">${label}</p>
+          <p class="text-sm text-gray-500">${address}</p>
+        </div>
+      </div>
+    `;
+  }
+}
+
 function renderOrderList() {
   orderListContainer.innerHTML = "";
   let totalAmount = 0;
@@ -51,5 +67,8 @@ function renderOrderList() {
   shippingElement.textContent = `$${shippingCost.toFixed(2)}`;
   totalElement.textContent = `$${(totalAmount + shippingCost).toFixed(2)}`;
 }
-
 renderOrderList();
+
+document.getElementById("chooseShippingBtn")?.addEventListener("click", () => {
+  window.location.href = "address.html";
+});
