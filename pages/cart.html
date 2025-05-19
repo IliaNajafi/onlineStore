@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoea - Cart</title>
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100">
+    <header class="flex justify-between items-center px-4 py-4 mt-4">
+      <div class="flex gap-4 items-center">
+        <img class="w-5 h-5" src="/icons/loginLogo.png" alt="Logo" />
+        <h1 class="text-2xl font-semibold">My Cart</h1>
+      </div>
+      <img class="w-8 h-8" src="/icons/searchCart.svg" alt="Search" />
+    </header>
+    <main id="cartContainer" class="px-5 space-y-4"></main>
+    <section
+      class="fixed bottom-14 left-0 w-full bg-white p-4 z-10 rounded-t-3xl shadow-inner"
+    >
+      <div class="flex justify-between items-center gap-4">
+        <div>
+          <p class="text-gray-400 text-sm">Total price</p>
+          <span id="totalPrice" class="text-xl font-bold block">$0.00</span>
+        </div>
+        <button
+          class="flex-1 h-14 flex items-center justify-center gap-2 bg-black text-white text-[15px] font-bold rounded-full shadow-lg"
+        >
+          Checkout
+          <img class="w-6 h-6" src="/icons/rightArrow.svg" alt="Arrow" />
+        </button>
+      </div>
+    </section>
+    <nav class="fixed bottom-0 left-0 w-full bg-white shadow-md z-20">
+      <div class="flex justify-around py-2 text-xs">
+        <button id="homeBtn" class="flex flex-col items-center">
+          <img
+            class="w-[21px] h-[24px]"
+            src="/icons/cartHomeIcon.svg"
+            alt="Home"
+          />
+          <span>Home</span>
+        </button>
+        <button id="cartBtn" class="flex flex-col items-center">
+          <img
+            class="w-[21px] h-[24px]"
+            src="/icons/cartSectionIcon.svg"
+            alt="Cart"
+          />
+          <span>Cart</span>
+        </button>
+        <button id="ordersBtn" class="flex flex-col items-center text-gray-400">
+          <img
+            class="w-[21px] h-[24px]"
+            src="/icons/ordersIcon.png"
+            alt="Orders"
+          />
+          <span>Orders</span>
+        </button>
+        <button id="walletBtn" class="flex flex-col items-center text-gray-400">
+          <img
+            class="w-[21px] h-[24px]"
+            src="/icons/walletIcon.png"
+            alt="Wallet"
+          />
+          <span>Wallet</span>
+        </button>
+        <button
+          id="profileBtn"
+          class="flex flex-col items-center text-gray-400"
+        >
+          <img
+            class="w-[21px] h-[24px]"
+            src="/icons/profileIcon.png"
+            alt="Profile"
+          />
+          <span>Profile</span>
+        </button>
+      </div>
+    </nav>
+    <!-- Remove Confirmation Modal -->
+    <div
+      id="removeModal"
+      class="hidden fixed inset-0 z-50 bg-black/70 items-end justify-center"
+    >
+      <div class="bg-gray-50 w-full rounded-t-3xl p-4 pb-6 shadow-lg">
+        <h2 class="text-lg font-bold text-center mb-4">Remove From Cart?</h2>
+        <hr class="text-gray-300 mb-5" />
+        <div class="flex gap-4 items-center bg-white p-3 rounded-xl mb-4">
+          <img
+            id="modalItemImage"
+            src=""
+            alt="Product Image"
+            class="w-28 h-28 object-contain rounded-xl"
+          />
+          <div class="flex flex-col flex-1">
+            <p id="modalItemName" class="font-semibold text-sm mb-1"></p>
+            <p
+              id="modalItemDetail"
+              class="text-gray-500 text-sm capitalize flex items-center gap-2"
+            ></p>
+            <div class="flex justify-between items-center mt-2">
+              <p id="modalItemPrice" class="font-bold text-sm"></p>
+              <div class="flex justify-between items-center mt-2">
+                <p id="modalItemPrice" class="font-bold text-sm"></p>
+                <div id="modalQuantityWrapper" class="w-auto"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="text-gray-300 mb-5" />
+        <div class="flex gap-4">
+          <button
+            id="cancelRemove"
+            class="flex-1 py-3 bg-gray-200 rounded-full font-semibold shadow-2xl"
+          >
+            Cancel
+          </button>
+          <button
+            id="confirmRemove"
+            class="flex-1 py-3 bg-black text-white rounded-full font-semibold shadow-2xl"
+          >
+            Yes, Remove
+          </button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/cart.js"></script>
+  </body>
+</html>
