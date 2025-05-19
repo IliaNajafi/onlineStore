@@ -168,3 +168,6 @@ navButtons.forEach(({ id, page }) => {
     btn.classList.add("text-gray-400");
   }
 });
+document.getElementById("checkoutBtn")?.addEventListener("click", () => {
+  window.location.href = "checkout.html";
+});
