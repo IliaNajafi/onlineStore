@@ -140,12 +140,4 @@ window.addEventListener("scroll", () => {
   }
 });
 
-document.getElementById("cartBtn")?.addEventListener("click", () => {
-  window.location.href = "cart.html";
-});
-
-document.getElementById("homeBtn")?.addEventListener("click", () => {
-  window.location.href = "home.html";
-});
-
 loadBrands();
