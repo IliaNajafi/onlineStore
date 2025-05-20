@@ -7,9 +7,8 @@ const orderListContainer = document.getElementById("checkoutProductList");
 const amountElement = document.getElementById("amountPrice");
 const shippingElement = document.getElementById("shippingPrice");
 const totalElement = document.getElementById("totalPrice");
-// watch out
+
 let shippingCost = 0;
-// watch out
 const selectedAddress = localStorage.getItem("selectedAddress");
 if (selectedAddress) {
   const { label, address } = JSON.parse(selectedAddress);
@@ -23,6 +22,19 @@ if (selectedAddress) {
         </div>
       </div>
     `;
+  }
+}
+
+/// Shipping Section
+const selectedShipping = localStorage.getItem("selectedShipping");
+const shippingTypeElement = document.getElementById("shippingType");
+
+if (selectedShipping) {
+  const { label, shipping, cost = 0 } = JSON.parse(selectedShipping);
+  shippingCost = cost;
+
+  if (shippingTypeElement) {
+    shippingTypeElement.textContent = `${label} (${shipping}) - $${cost}`;
   }
 }
 
@@ -69,6 +81,9 @@ function renderOrderList() {
 }
 renderOrderList();
 
-document.getElementById("chooseShippingBtn")?.addEventListener("click", () => {
+document.getElementById("chooseAddressBtn")?.addEventListener("click", () => {
   window.location.href = "address.html";
+});
+document.getElementById("chooseShippingBtn")?.addEventListener("click", () => {
+  window.location.href = "shipping.html";
 });
