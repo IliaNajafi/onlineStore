@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoea - Payment</title>
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-50 min-h-screen flex flex-col">
+    <div class="flex items-center justify-between px-4 py-4">
+      <div class="flex items-center gap-3">
+        <button id="backButton" class="text-3xl font-light">&#8592;</button>
+        <h1 class="text-2xl font-semibold">Payment Methods</h1>
+      </div>
+      <button>
+        <img src="/icons/plusSquare.svg" alt="More" class="w-8 h-8" />
+      </button>
+    </div>
+    <p class="text-gray-600 ml-6 mt-4 font-semibold">
+      Select the payment method you want yo use.
+    </p>
+    <section class="flex-1 px-6 space-y-8 overflow-y-auto mt-6">
+      <div class="bg-white p-4 rounded-xl flex justify-between items-center">
+        <div class="flex gap-3 items-center">
+          <img src="/icons/walletIcon.svg" class="w-10 h-10" alt="Wallet" />
+          <div>
+            <p class="font-bold flex items-center gap-2 py-1">My Wallet</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="font-bold text-gray-600">$9.379</span>
+          <input
+            type="radio"
+            name="payment"
+            class="w-5 h-5 accent-black"
+            value="0"
+          />
+        </div>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl flex justify-between items-center">
+        <div class="flex gap-3 items-center">
+          <img src="/icons/paypalIcon.svg" class="w-10 h-10" alt="PayPal" />
+          <div>
+            <p class="font-bold flex items-center gap-2 py-1">PayPal</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <input
+            type="radio"
+            name="payment"
+            class="w-5 h-5 accent-black"
+            value="1"
+          />
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-xl flex justify-between items-center">
+        <div class="flex gap-3 items-center">
+          <img src="/icons/googlelIcon.svg" class="w-10 h-10" alt="Google" />
+          <div>
+            <p class="font-bold flex items-center gap-2 py-1">Google Pay</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <input
+            type="radio"
+            name="payment"
+            class="w-5 h-5 accent-black"
+            value="2"
+          />
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-xl flex justify-between items-center">
+        <div class="flex gap-3 items-center">
+          <img src="/icons/appleIcon.svg" class="w-10 h-10" alt="Apple" />
+          <div>
+            <p class="font-bold flex items-center gap-2 py-1">Apple Pay</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <input
+            type="radio"
+            name="payment"
+            class="w-5 h-5 accent-black"
+            value="3"
+          />
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-xl flex justify-between items-center">
+        <div class="flex gap-3 items-center">
+          <img
+            src="/icons/mastercardIcon.svg"
+            class="w-10 h-10"
+            alt="masterCard"
+          />
+          <div>
+            <p class="font-bold flex items-center gap-2 py-1">
+              .... .... .... .... 4679
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <input
+            type="radio"
+            name="payment"
+            class="w-5 h-5 accent-black"
+            value="4"
+          />
+        </div>
+      </div>
+    </section>
+    <div class="px-4 py-6">
+      <button
+        id="confirmPaymentBtn"
+        class="w-full h-14 flex items-center justify-center gap-2 bg-black text-white text-sm font-semibold rounded-full shadow-lg"
+      >
+        Confirm Payment
+      </button>
+    </div>
+    <!-- Success Modal -->
+    <div
+      id="successModal"
+      class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden"
+    >
+      <div class="bg-white rounded-4xl w-[300px] p-6 text-center shadow-xl">
+        <div class="w-48 h-48 mx-auto flex items-center justify-center mb-4">
+          <img src="/images/successModal.jpg" alt="Success" class="w-32 h-32" />
+        </div>
+        <h2 class="text-xl font-bold mb-4">Order Successful!</h2>
+        <p class="text-sm text-gray-700 mb-8">
+          You have successfully made order
+        </p>
+        <button
+          id="confirmSuccessBtn"
+          class="bg-black text-white w-56 h-12 rounded-full"
+        >
+          OK
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/payment.js"></script>
+  </body>
+</html>

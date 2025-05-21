@@ -131,3 +131,7 @@ document.getElementById("applyPromoBtn")?.addEventListener("click", () => {
     alert("wrong promo code!");
   }
 });
+
+document.getElementById("paymentBtn")?.addEventListener("click", () => {
+  window.location.href = "payment.html";
+});
