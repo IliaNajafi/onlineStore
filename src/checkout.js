@@ -92,8 +92,8 @@ document.getElementById("chooseShippingBtn")?.addEventListener("click", () => {
 document.getElementById("applyPromoBtn")?.addEventListener("click", () => {
   const input = document.getElementById("promoInput");
   const promoContainer = document.getElementById("promoContainer");
-  const code = input.value.trim();
-  if (code !== "") {
+  const code = input.value.trim().toLowerCase();
+  if (code === "dis30") {
     promoContainer.innerHTML = `
       <div class="flex items-center justify-between bg-black text-white rounded-full px-4 py-2 w-fit text-sm font-medium">
         <span>Discount 30% Off</span>
@@ -127,5 +127,7 @@ document.getElementById("applyPromoBtn")?.addEventListener("click", () => {
         discountAmount.textContent = "-$0.00";
       }
     });
+  } else {
+    alert("wrong promo code!");
   }
 });
