@@ -87,3 +87,45 @@ document.getElementById("chooseAddressBtn")?.addEventListener("click", () => {
 document.getElementById("chooseShippingBtn")?.addEventListener("click", () => {
   window.location.href = "shipping.html";
 });
+
+/// Promo Code Section
+document.getElementById("applyPromoBtn")?.addEventListener("click", () => {
+  const input = document.getElementById("promoInput");
+  const promoContainer = document.getElementById("promoContainer");
+  const code = input.value.trim();
+  if (code !== "") {
+    promoContainer.innerHTML = `
+      <div class="flex items-center justify-between bg-black text-white rounded-full px-4 py-2 w-fit text-sm font-medium">
+        <span>Discount 30% Off</span>
+        <button id="removePromo" class="ml-2 text-white text-base">×</button>
+      </div>
+    `;
+    const amount = parseFloat(amountElement.textContent.replace("$", ""));
+    const discount = amount * 0.3;
+    const newTotal = (amount + shippingCost - discount).toFixed(2);
+    totalElement.textContent = `$${newTotal}`;
+    const discountSec = document.getElementById("discountSec");
+    const discountAmount = document.getElementById("discountAmount");
+    if (discountSec && discountAmount) {
+      discountSec.classList.remove("hidden");
+      discountAmount.textContent = `-$${discount.toFixed(2)}`;
+    }
+
+    document.getElementById("removePromo").addEventListener("click", () => {
+      promoContainer.innerHTML = `
+        <input
+          id="promoInput"
+          type="text"
+          placeholder="Enter Promo Code"
+          class="w-full text-sm bg-transparent focus:outline-none"
+        />
+      `;
+      const resetTotal = (amount + shippingCost).toFixed(2);
+      totalElement.textContent = `$${resetTotal}`;
+      if (discountSec && discountAmount) {
+        discountSec.classList.add("hidden");
+        discountAmount.textContent = "-$0.00";
+      }
+    });
+  }
+});

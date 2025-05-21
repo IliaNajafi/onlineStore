@@ -62,14 +62,21 @@
     <section class="px-4 mt-6">
       <p class="text-sm font-bold mb-2">Promo Code</p>
       <div class="flex items-center gap-4">
-        <div class="flex-1 bg-gray-100 rounded-xl mx-2 px-4 py-3">
+        <div
+          id="promoContainer"
+          class="flex-1 bg-gray-100 rounded-xl mx-2 px-4 py-3"
+        >
           <input
+            id="promoInput"
             type="text"
             placeholder="Enter Promo Code"
             class="w-full text-sm bg-transparent focus:outline-none"
           />
         </div>
-        <button class="w-12 h-12 flex items-center justify-center rounded-full">
+        <button
+          id="applyPromoBtn"
+          class="w-12 h-12 flex items-center justify-center rounded-full"
+        >
           <img src="/icons/plusCircleIcon.svg" class="w-20 h-20 mr-1" alt="" />
         </button>
       </div>
@@ -84,6 +91,10 @@
       <div class="flex justify-between text-sm">
         <span class="text-gray-500">Shipping</span>
         <span id="shippingPrice" class="font-medium">$0.00</span>
+      </div>
+      <div id="discountSec" class="flex justify-between text-sm hidden">
+        <span class="text-gray-500">Promo</span>
+        <span id="discountAmount" class="font-medium">-$0.00</span>
       </div>
       <hr class="text-gray-300" />
       <div class="flex justify-between text-sm">
