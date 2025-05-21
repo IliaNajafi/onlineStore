@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoea - Shipping</title>
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-50 min-h-screen flex flex-col">
+    <div class="flex items-center px-4 py-8 gap-3">
+      <button id="backButton" class="text-xl font-light">&#8592;</button>
+      <h1 class="text-2xl font-bold">Choose Shipping</h1>
+    </div>
+    <!-- shippings List -->
+    <section class="flex-1 px-6 space-y-8 overflow-y-auto">
+      <div class="bg-white p-4 rounded-xl flex justify-between items-center">
+        <div class="flex gap-3 items-center">
+          <img
+            src="/icons/economyDelivery.svg"
+            class="w-10 h-10"
+            alt="location"
+          />
+          <div>
+            <p class="font-bold flex items-center gap-2 py-1">Economy</p>
+            <p class="text-sm text-gray-500 leading-tight">
+              Estimated Arrival, Dec 20-23
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="font-bold">$10</span>
+          <input
+            type="radio"
+            name="shipping"
+            class="w-5 h-5 accent-black"
+            value="0"
+          />
+        </div>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl flex justify-between items-center">
+        <div class="flex gap-3 items-center">
+          <img
+            src="/icons/regularDelivery.svg"
+            class="w-10 h-10"
+            alt="location"
+          />
+          <div>
+            <p class="font-bold flex items-center gap-2 py-1">Regular</p>
+            <p class="text-sm text-gray-500 leading-tight">
+              Estimated Arrival, Dec 20-22
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="font-bold">$15</span>
+          <input
+            type="radio"
+            name="shipping"
+            class="w-5 h-5 accent-black"
+            value="1"
+          />
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-xl flex justify-between items-center">
+        <div class="flex gap-3 items-center">
+          <img
+            src="/icons/cargoDelivery.svg"
+            class="w-10 h-10"
+            alt="location"
+          />
+          <div>
+            <p class="font-bold flex items-center gap-2 py-1">Cargo</p>
+            <p class="text-sm text-gray-500 leading-tight">
+              Estimated Arrival, Dec 19-20
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="font-bold">$20</span>
+          <input
+            type="radio"
+            name="shipping"
+            class="w-5 h-5 accent-black"
+            value="2"
+          />
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-xl flex justify-between items-center">
+        <div class="flex gap-3 items-center">
+          <img
+            src="/icons/expressDelivery.png"
+            class="w-10 h-10 rounded-3xl"
+            alt="location"
+          />
+          <div>
+            <p class="font-bold flex items-center gap-2 py-1">Express</p>
+            <p class="text-sm text-gray-500 leading-tight">
+              Estimated Arrival, Dec 18-19
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="font-bold">$30</span>
+          <input
+            type="radio"
+            name="shipping"
+            class="w-5 h-5 accent-black"
+            value="3"
+          />
+        </div>
+      </div>
+    </section>
+    <div class="px-4 py-6">
+      <button
+        id="applyShipping"
+        class="w-full h-14 flex items-center justify-center gap-2 bg-black text-white text-[15px] font-semibold rounded-full shadow-lg"
+      >
+        Apply
+      </button>
+    </div>
+    <script type="module" src="/src/shipping.js"></script>
+  </body>
+</html>

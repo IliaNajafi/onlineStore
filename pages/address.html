@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoea - Address</title>
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-50 min-h-screen flex flex-col">
+    <div class="flex items-center px-4 py-8 gap-3">
+      <button id="backButton" class="text-xl font-light">&#8592;</button>
+      <h1 class="text-2xl font-bold">Shipping Address</h1>
+    </div>
+    <!-- Addresses List -->
+    <section class="flex-1 px-4 space-y-4 overflow-y-auto">
+      <div class="bg-white p-4 rounded-xl flex justify-between items-center">
+        <div class="flex gap-3 items-center">
+          <img src="/icons/locationIcon.svg" class="w-6 h-6" alt="location" />
+          <div>
+            <p class="font-bold flex items-center gap-2 py-1">
+              Home
+              <span
+                class="text-[10px] bg-gray-200 font-semibold px-4 py-1 rounded-md"
+                >Default</span
+              >
+            </p>
+            <p class="text-sm text-gray-500 leading-tight">
+              61480 Sunbrook Park, PC 5679
+            </p>
+          </div>
+        </div>
+        <input
+          type="radio"
+          name="address"
+          class="w-5 h-5 accent-black"
+          value="0"
+        />
+      </div>
+      <div class="bg-white p-4 rounded-xl flex justify-between items-center">
+        <div class="flex gap-3 items-center">
+          <img src="/icons/locationIcon.svg" class="w-6 h-6" alt="location" />
+          <div>
+            <p class="font-bold flex items-center gap-2 py-1">Office</p>
+            <p class="text-sm text-gray-500 leading-tight">
+              6993 Meadow Valley Terra, PC 3637
+            </p>
+          </div>
+        </div>
+        <input
+          type="radio"
+          name="address"
+          class="w-5 h-5 accent-black"
+          value="1"
+        />
+      </div>
+      <div class="bg-white p-4 rounded-xl flex justify-between items-center">
+        <div class="flex gap-3 items-center">
+          <img src="/icons/locationIcon.svg" class="w-6 h-6" alt="location" />
+          <div>
+            <p class="font-bold flex items-center gap-2 py-1">Apartment</p>
+            <p class="text-sm text-gray-500 leading-tight">
+              21833 Clyde Gallagher, PC 4662
+            </p>
+          </div>
+        </div>
+        <input
+          type="radio"
+          name="address"
+          class="w-5 h-5 accent-black"
+          value="2"
+        />
+      </div>
+      <div class="bg-white p-4 rounded-xl flex justify-between items-center">
+        <div class="flex gap-3 items-center">
+          <img src="/icons/locationIcon.svg" class="w-6 h-6" alt="location" />
+          <div>
+            <p class="font-bold flex items-center gap-2 py-1">Parent's House</p>
+            <p class="text-sm text-gray-500 leading-tight">
+              5259 Blue Bill Park, PC 4627
+            </p>
+          </div>
+        </div>
+        <input
+          type="radio"
+          name="address"
+          class="w-5 h-5 accent-black"
+          value="3"
+        />
+      </div>
+      <button class="w-full mt-1 bg-gray-200 font-semibold py-4 rounded-full">
+        Add New Address
+      </button>
+    </section>
+    <div class="px-4 py-6">
+      <button
+        id="applyAddress"
+        class="w-full h-14 flex items-center justify-center gap-2 bg-black text-white text-[15px] font-semibold rounded-full shadow-lg"
+      >
+        Apply
+      </button>
+    </div>
+
+    <script type="module" src="/src/address.js"></script>
+  </body>
+</html>
